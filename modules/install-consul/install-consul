@@ -326,7 +326,7 @@ function install {
   sudo ls -latr /opt/consul/bin
   sudo ls -latr /usr/local/bin/consul
   echo "${PATH}"
-  #PATH=/opt/consul/bin:/usr/local/bin:/usr/bin sudo which consul
+  sudo PATH=/opt/consul/bin:$PATH which consul
   
   
   if sudo command -v consul; then

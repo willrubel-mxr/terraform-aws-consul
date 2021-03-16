@@ -326,6 +326,8 @@ function install {
   sudo ls -latr /opt/consul/bin
   sudo ls -latr /usr/local/bin/consul
   echo "${PATH}"
+  PATH=/opt/consul/bin;$PATH
+  echo "${PATH}"
   which consul
 
   

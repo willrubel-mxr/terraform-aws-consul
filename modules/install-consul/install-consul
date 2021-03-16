@@ -324,6 +324,7 @@ function install {
   
   sudo ls -latr /opt/consul
   sudo ls -latr /opt/consul/bin
+  sudo ls -latr /usr/local/bin/consul
   which consul
   echo "${PATH}"
   

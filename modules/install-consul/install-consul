@@ -325,8 +325,9 @@ function install {
   sudo ls -latr /opt/consul
   sudo ls -latr /opt/consul/bin
   sudo ls -latr /usr/local/bin/consul
-  which consul
   echo "${PATH}"
+  which consul
+
   
   if command -v consul; then
     log_info "Consul install complete!";

@@ -288,12 +288,14 @@ function install {
   assert_not_empty "--user" "$user"
 
   log_info "Starting Consul install"
-
+  echo "installing dependencies"
   install_dependencies
+  echo "create consul user"
   create_consul_user "$user"
   create_consul_install_paths "$path" "$user"
-
+  echo "fetching binary"
   fetch_binary "$version" "$download_url"
+  echo "installing binary"
   install_binary "$path" "$user"
 
   echo "ca_file_path: ${ca_file_path}"

@@ -210,6 +210,7 @@ function install_binary {
   else
     log_info "Adding symlink to $consul_dest_path in $symlink_path"
     sudo ln -s "$consul_dest_path" "$symlink_path"
+    sudo ln -s "$consul_dest_path" "/usr/bin/consul"
   fi
 
   log_info "Copying Consul run script to $run_consul_dest_path"

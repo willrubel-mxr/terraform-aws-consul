@@ -302,10 +302,12 @@ function install {
   echo "cert_file_path: ${cert_file_path}"
   echo "key_file_path: ${key_file_path}"
   
+  
   if [[ -n "$ca_file_path" || -n "$cert_file_path" || -n "$key_file_path" ]]; then
     install_tls_certificates "$path" "$user" "$ca_file_path" "$cert_file_path" "$key_file_path"
   fi
-
+  ls -latr /opt/consul
+  
   if command -v consul; then
     log_info "Consul install complete!";
   else

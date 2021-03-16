@@ -323,6 +323,7 @@ function install {
   fi
   
   sudo ls -latr /opt/consul
+  sudo ls -latr /opt/consul/bin
   
   if command -v consul; then
     log_info "Consul install complete!";
